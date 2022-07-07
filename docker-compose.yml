@@ -6,7 +6,7 @@ services:
       - db_data:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: somecomplexpassword
+      MYSQL_ROOT_PASSWORD: somepassword
       MYSQL_TCP_PORT: 3307
     ports:
     - 3307:3307
@@ -21,9 +21,9 @@ services:
       PMA_PORT: 3307
       PMA_HOST: db
       PMA_USER: root
-      PMA_PASSWORD: somecomplexpassword
+      PMA_PASSWORD: somepassword
     ports:
-      - 8889:80
+      - 5050:80
     restart: always
 
 volumes:
